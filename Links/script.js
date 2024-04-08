@@ -8,8 +8,10 @@ const linksStorage = document.getElementById("linksStorage");
 //funcionamiento eliminar link-links
 
 //agregar un evento al boton, cuando introducimos datos en input
-//function para almacenar en localstorage y convertir en obg/array key y value
+//function para almacenar en localstorage y convertir en obj/array key y value
 //function para createElement li,ahref
+
+
 
 addLinkButton.addEventListener("click", function () {
   const nameLink = nameInput.value;
@@ -19,7 +21,7 @@ addLinkButton.addEventListener("click", function () {
     alert("Please fill NAME||LINK");
     return;
   }
-  addLinksSaved(nameLink, nameUrl); //agregamos function
+  addLinksSaved(nameLink, nameUrl); //agregamos function aparezca en local 
   addLinksDom(); //agregamos a la function
 });
 
@@ -35,10 +37,10 @@ function addLinksSaved(name, url) {
 }
 //addLinksSaved()
 
-//crear function para añadir dom???
-//eliminar nodo hijos
-//link es el elemento actual del array y en cada iteracion, link tomara nombre de uno de los elemntos del array.
-//indice del elemento actual del array links, itera desde 0 a -1???????
+// crear function para añadir dom???
+// eliminar nodo hijos
+// link es el elemento actual del array y en cada iteracion, link tomara nombre de uno de los elemntos del array.
+// indice del elemento actual del array links, itera desde 0 a -1???????
 
 function addLinksDom() {
   let links = JSON.parse(localStorage.getItem("links-url")) || [];
@@ -71,11 +73,25 @@ function addLinksDom() {
 //addLinksDom();
 
 //hacer funcionar al boton erase / que tiene que hacer para añadir a todos los enlaces....
-//ponemos parametro forEach indice/eliminar enlaces almacenados basado en indice
+// parametro forEach indice/eliminar enlaces almacenados basado en indice
 // metodo splice del array linksStored y pasamos argumento indice, elimina todos los elementos del array apartir del indice
+// metodo splice(): Si especifica un número diferente de elementos a agregar que los que se 
+// eliminarán, el array tendrá un tamaño diferente al original una vez finalizada la llamada.
+
 const eraseBtn = (indice) => {
   let linksStored = JSON.parse(localStorage.getItem("links-url"));
-  //si no agrego 1 , se borra todo cuando pulsamos el primer enlace a/CN
-  linksStored.splice(indice, 1);
+  linksStored.splice(indice, 1);//resultado de json linksStored
   localStorage.setItem("links-url", JSON.stringify(linksStored));
 };
+
+// //Sintaxis
+// Use el nombre del evento en métodos como addEventListener()
+//  o establezca una propiedad de controlador de eventos.
+
+// JS
+// Copiar en el portapapeles
+// addEventListener("DOMContentLoaded", (event) => {});........
+
+document.addEventListener('DOMContentLoaded', ()=>{
+  addLinksDom()
+})

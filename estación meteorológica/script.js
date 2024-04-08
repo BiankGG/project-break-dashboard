@@ -49,6 +49,10 @@ const getKnowWeather = (data) => {
 };
 //console.log()
 
+// async :Cuando se llama a una función async, esta devuelve un elemento Promise. 
+// Cuando la función async devuelve un valor, Promise se resolverá con el
+//  valor devuelto. Si la función async genera una excepción o algún valor,
+//   Promise se rechazará con el valor generado.
 
 const getIcons = async () => {
   try {

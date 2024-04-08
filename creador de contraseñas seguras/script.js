@@ -19,7 +19,7 @@ generateButton.addEventListener("click", function () {
     return;
   }
   const password = generate(length);
-  passWordR.textContent = "Your Password: " + password.join('');//elimino las comas utilizando join()
+  passWordR.textContent = "Your Password: " + password.join(""); //elimino las comas utilizando join()
 });
 
 // for (var i = 0; i < 9; i++) {
@@ -31,11 +31,14 @@ generateButton.addEventListener("click", function () {
 //
 //push al final del array
 const generate = (length) => {
-  let options =
-    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-_=+";
-  options = options.split("");//convertir en un array/separamos cadena caracter string
+  let upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  let lowerCase = "abcdefghijklmnopqrstuvwxyz";
+  let numbers = "0123456789";
+  let simbols = "!@#$%^&*()-_=+";
+  let options = upperCase + lowerCase + numbers + simbols;
+  options = options.split(""); //convertir en un array/separamos cadena caracter string
   let stored = [];
-  //console.log(options)
+  console.log(options);
 
   for (let i = 0; i < length; i++) {
     let randomCharacter = Math.floor(Math.random() * options.length); //agregar length obtener la propiedad

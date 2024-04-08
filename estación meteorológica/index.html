@@ -1,19 +1,59 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>estación meteorológica</title>
-</head>
-<body>
-  
-    
+  </head>
+  <body>
+    <div class="weather">
+      <h2 id="location"></h2>
+      <p id="condition"></p>
+      <div id="currentWeather" class="currentWeather">
+        <img id="weatherIcons" src="" alt="luna" />
+        <div class="currentData">
+          <div class="currentGrades">
+            <div class="temperatureCelcius">
+              <span class="temperature">°C</span>
+              <img id="iconWeather" src="img/celcius.png" alt="" />
+            </div>
+          </div>
+          <ul>
+            <li id="precipitation">Precipitation:</li>
+            <li id="humidity">Humidity:</li>
+            <li id="wind">Wind:</li>
+          </ul>
+        </div>
+      </div>
+      <ul id="smallSquareWeather" class="smallSquareWeather">
+        <li class="smallSquareGrades"></li>
+        <li class="smallSquareGrades"></li>
+        <li class="smallSquareGrades"></li>
+        <li class="smallSquareGrades"></li>
+        <li class="smallSquareGrades"></li>
+        <li class="smallSquareGrades"></li>
+        <li class="smallSquareGrades"></li>
+        <li class="smallSquareGrades"></li>
+        <li class="smallSquareGrades"></li>
+        <li class="smallSquareGrades"></li>
+        <li class="smallSquareGrades"></li>
+        <li class="smallSquareGrades"></li>
+        <li class="smallSquareGrades"></li>
+        <li class="smallSquareGrades"></li>
+        <li class="smallSquareGrades"></li>
+        <li class="smallSquareGrades"></li>
+        <li class="smallSquareGrades"></li>
+        <li class="smallSquareGrades"></li>
+        <li class="smallSquareGrades"></li>
+        <li class="smallSquareGrades"></li>
+        <li class="smallSquareGrades"></li>
+        <li class="smallSquareGrades"></li>
+        <li class="smallSquareGrades"></li>
+        <li class="smallSquareGrades"></li>
+      </ul>
+    </div>
 
-
-
-
-
-  <script src="script.js"></script>  
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>

@@ -1,0 +1,45 @@
+*{
+box-sizing: border-box;
+}
+
+.currentWeather{
+    display: flex;
+    border: 2px solid black;
+    width: 350px;
+    
+}
+
+
+.smallSquareWeather{
+    display: flex;
+    width: 250px;
+    height: 100px;
+    overflow: scroll;
+    padding: 0px;
+    width: 350px;
+    background-color: aqua;
+   
+}
+
+
+
+.currentData{
+    display: flex;
+}
+.currentGrades{
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    font-size: 30px;
+}
+#iconWeather{
+    
+    height: 50px;
+    width: 38px;
+}
+
+.temperatureCelcius{
+    display: flex;
+    justify-content: end;
+}

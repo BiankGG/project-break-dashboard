@@ -1,0 +1,97 @@
+.container{
+    background-color: rgb(167, 131, 201);
+    width: 200px;
+    height: 360px;
+
+}
+.title{
+    display: flex;
+    text-align: left;
+
+}
+h2{
+   font-size:  14px;
+   font-family: monospace;
+   margin-left: 10px;
+}
+img{
+    width: 20px;
+    height: 20px;
+    margin-top: 10px;
+    margin-left: 5px;
+    
+}
+#name-input{
+    width:160px ;
+    height: 21px;
+    border-radius: 2px;
+    border: 1px;
+    background-color: white(202, 185, 152);
+    margin-left: 10px;
+}
+#url-input{
+    width: 160px;
+    margin-top: 10px;
+    height: 21px;
+    border-radius: 2px;
+    border: 1px;
+    background-color: white;
+    margin-left: 10px;
+}
+.addLinkButton{
+    width: 170px;
+    margin-top: 10px;
+    height: 28px;
+    border-radius: 2px;
+    border: 1px;
+    background-color: rgb(215, 28, 221);
+    color: white;
+    margin-left: 10px;
+    
+}
+
+
+.inputContainer{
+    display:flex ;
+    flex-direction: column;
+    width: 200px;
+    height: auto;
+    
+}
+ul{
+    margin-left: 5px;
+    width: 145px;
+    height: 200px;
+    background: rgb(58, 27, 66);
+}
+.linksStorage{
+    overflow: scroll;
+
+}
+
+.BtnErase{  
+ border-radius: 18px;
+ width: 23px;
+ height: 18px;
+ margin-left: 10px;
+ background-color: transparent;
+ color: grey;
+ 
+
+ 
+
+}
+
+.line{
+    display: flex;
+    
+    
+}
+
+.ahref{
+    text-decoration: none;
+    color: rgb(215, 28, 221);
+    font-size: 22px;
+    
+    
+}

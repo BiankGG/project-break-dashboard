@@ -7,10 +7,8 @@ const Humidity = document.getElementById("humidity");
 const temperature = document.querySelector(".temperature");
 const iconWeather = document.getElementById("iconWeather");
 const weatherIconsPic = document.getElementById("weatherIcons");
-const smallSquareGrades = document.querySelectorAll(".smallSquareGrades");
+const smallSquareGradesList = document.querySelector(".smallSquareGrades");
 const baseUrl = "http://api.weatherapi.com/v1";
-
-
 
 //obtener datos weather de API
 const getWeatherApi = () => {
@@ -42,14 +40,10 @@ const getKnowWeather = (data) => {
   Precipitation.textContent = `Precipitacion: ${data.current.precip_mm}`;
   Humidity.textContent = `Humidity: ${data.current.humidity}`;
   wind.textContent = `wind: ${data.current.wind_kph}`;
-  tempC.textContent = `${data.current.temp_c}ºc`; //probando
-   
-
-  
 };
 //console.log()
 
-// async :Cuando se llama a una función async, esta devuelve un elemento Promise. 
+// async :Cuando se llama a una función async, esta devuelve un elemento Promise.
 // Cuando la función async devuelve un valor, Promise se resolverá con el
 //  valor devuelto. Si la función async genera una excepción o algún valor,
 //   Promise se rechazará con el valor generado.
@@ -63,14 +57,33 @@ const getIcons = async () => {
       throw new Error("Getting hour not working!");
     }
     const data = await response.json();
-    const infoApi = data.forecast.forecastday[0].hour
-    // const infoIcon = data.forecast.forecastday[0].condition.icon
-    // const infoC = data.forecast.forecastday[0].temp_c
-    
-   console.log(infoApi)
+    const infoApiXHour = data.forecast.forecastday[0].hour;
+
+    infoApiXHour.forEach((hour) => {
+      const time = hour.time;
+      const iconUrl = hour.condition.icon;
+      const tempC = hour.temp_c;
+      // console.log( `${time},${iconUrl},${tempC}`) //ver en consola
+      const domHour = document.createElement("div");
+      domHour.classList.add("Xhour");
+
+      domHour.innerHTML = `
+      <p>${time.substr(11)}</p>
+      <img src='${iconUrl}' alt= 'icon'>
+      <p>${tempC} ºc</p>
+      `;
+      
+     
+      smallSquareGradesList.appendChild(domHour);
+      
+    });
+
+    console.log(infoApiXHour);
   } catch (error) {
     console.error("Error getting time:", error);
   }
 };
 
 getIcons();
+//A string's substr() method extracts length
+//characters from the string, counting from the start index.

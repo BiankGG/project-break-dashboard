@@ -1,22 +1,29 @@
 *{
 box-sizing: border-box;
 }
-
-body{
-    background-color: rgb(248, 78, 78);
+#backgroundContainer{
+    height: 100vh; 
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    
 }
-h2{
-    margin-left: 10px;
-    color: aliceblue;
+
+#location{
+    color: white;
+    font-size: 42px;
+    
 }
 .sideInfo{
     color: white;
+    font-size: 32px;
 }
 .currentWeather{
     display: flex;
     border: 2px solid rgb(215, 57, 57);
-    width: 350px;
-    height: 100px;
+    width: 590px;
+    height: 200px;
     margin-left: 4px;
     
 }
@@ -24,10 +31,9 @@ h2{
 display: flex;
 justify-content: flex-start;
 overflow-x: auto;
-
-width: 350px;
-height: 180px;
-margin-top: 20px;
+width: 590px;
+height: 200px;
+margin-top: 50px;
 }
 
 .smallSquareWeather{
@@ -49,23 +55,26 @@ margin-top: 20px;
     width: 150px;
     height: auto;
     margin-right: 10px;
-    background: linear-gradient(45deg, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.5));
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.9), rgba(0, 0, 0, 0.9));
     
 
 }
 
-p{
+#condition{
     margin-left: 10px;
     color: white;
+    font-size: 42px;
 }
 span{
     color: aliceblue;
+    font-size: 30px;
 }
 
 
 
 .currentData{
     display: flex;
+    
 }
 .currentGrades{
     width: 100px;
@@ -77,25 +86,44 @@ span{
 #iconWeather{
     
     height: 36px;
-    width: 36px;
+    width: 45px;
+   
 }
+
 
 .temperatureCelcius{
     display: flex;
     justify-content: end;
 }
 
-.weather{
-    background: linear-gradient(45deg, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.5));
-    width: 360px;
-    height: 400px;
+.weather {
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.9), rgba(0, 0, 0, 0.9));
+    width: auto;
+    height: auto;
     position: absolute;
     top: 50%;
-    right: 0;
-    margin-top: -270px;
-    margin-right: 100px;
-  
-  
-    
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
+.Nav{
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.9), rgba(0, 0, 0, 0.9));
+    border-radius: 20px;
+    width: 600px;
+    height: 100px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    left: 50%;
+    bottom: 0;
+    padding: 20px;
+
+}
+
+.nav-img{
+  
+    width: 85px;
+    height: 72px;
 }

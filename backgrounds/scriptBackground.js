@@ -8,7 +8,8 @@ let imagesBackground = [
   "thor.jpg",
   "viuda.png",
   "bruja.png",
-  "peterG.png",
+  "peterG.jpg",
+  "peter.png"
 ];
 
 //crear una function para entrar en array y pasar una a una
@@ -36,6 +37,7 @@ function generateBackGround() {
       "viuda.png",
       "bruja.png",
       "peterG.png",
+      "peter.png"
     ];
   }
 }

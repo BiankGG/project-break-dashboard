@@ -78,7 +78,7 @@ const getIcons = async () => {
       
     });
 
-    // console.log(infoApiXHour);
+    console.log(infoApiXHour);
   } catch (error) {
     console.error("Error getting time:", error);
   }
@@ -87,3 +87,38 @@ const getIcons = async () => {
 getIcons();
 //A string's substr() method extracts length, quita caracteres......
 //characters from the string, counting from the start index.
+let imagesBackground = [
+  "capi.png",
+  "deadpool.jpg",
+  "strange.png",
+  "vengadores.jpg",
+  "spiderman.jpg",
+  "stan.png",
+  "thor.jpg",
+  "viuda.png",
+  "bruja.png",
+];
+
+
+function generateBackGround() {
+  if (imagesBackground.length > 0) {
+    const setBackgrounds = Math.floor(Math.random() * imagesBackground.length);
+    const imageUrl = `url(/img/${imagesBackground[setBackgrounds]})`;
+    document.body.style.backgroundImage = imageUrl;
+    imagesBackground.splice(setBackgrounds, 1); 
+  } else {
+    imagesBackground = [
+      "capi.png",
+      "deadpool.jpg",
+      "strange.png",
+      "vengadores.jpg",
+      "spiderman.jpg",
+      "stan.png",
+      "thor.jpg",
+      "viuda.png",
+      "bruja.png",
+    ];
+  }
+}
+generateBackGround();
+setInterval(generateBackGround, 9000);

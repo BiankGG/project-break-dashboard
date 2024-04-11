@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styleDashBoard.css">
+    <!-- <link rel="stylesheet" href="reloj digital 24h + Fecha/styleReloj.css" /> -->
+    <!-- <link rel="stylesheet" href="estación meteorológica/styleEstación.css" /> -->
+    <link rel="stylesheet" href="creador de contraseñas seguras/styleCreadorContraseñas.css">
+    <link rel="stylesheet" href="Links/styleLinks.css" />
+    <title>DashBoard</title>
+  </head>
+  <body>
+    <section class="clock">
+    <div class="containerClock">
+      <h1 id="time">00:00:00</h1>
+      <p id="date">00/00/0000</p>
+      <p id="frase">hello world!</p>
+    </div>
+</section>
+    <section class="estación">
+      <div class="weather">
+        <h2 id="location"></h2>
+        <p id="condition"></p>
+        <div id="currentWeather" class="currentWeather">
+          <img id="weatherIcons" src="" alt="luna/sol/nube" />
+          <div class="currentData">
+            <div class="currentGrades">
+              <div class="temperatureCelcius">
+                <span class="temperature">°C</span>
+                <img id="iconWeather" src="/estación meteorológica/img/celcious new.jpg" alt="" />
+              </div>
+            </div>
+            <ul class="sideInfo">
+              <li id="precipitation">Precipitation:</li>
+              <li id="humidity">Humidity:</li>
+              <li id="wind">Wind:</li>
+            </ul>
+          </div>
+        </div>
+        <div class="liContainer">
+          <ul id="smallSquareWeather" class="smallSquareWeather">
+            <li class="smallSquareGrades"></li>
+          </ul>
+        </div>
+      </div>
+    </section class='passwordDash'>
+    <section class="passContainer">
+      <div class="pass">
+        <div class="title">
+          <h2>Create your secured password</h2>
+          <img src="/creador de contraseñas seguras/img/LOCK CAPI.jpg" alt="padLock" />
+        </div>
+        <div id="passWordF" class="passWordF">
+          <label for="lengthInput">Number of characters for password</label>
+          <input type="number" id="lengthInput" min="12" max="50" value="12" />
+          <button type="button">Generate Password</button>
+          <div id="passWordR" class="passWordResults"></div>
+        </div>
+      </div>
+    </section>
+    <section class="container">
+      <div class="list">
+        <div class="title">
+          <h2>Add interest link</h2>
+          <img class="CAPI" src="img/link2.png" alt="" />
+        </div>
+        <div class="inputContainer">
+            <input type="text" id="name-input" placeholder="Name of your link">
+            <input type="text" id="url-input" placeholder="Paste here the url">
+            <button id="addLinkButton" class="addLinkButton"> Add link</button>
+        </div>
+        <ul id="linksStorage" class="linksStorage"></ul>
+      </div>
+    </section>
+     <script src="scriptDash.js"></script>
+     <script src="creador de contraseñas seguras/scriptCreadorContraseñas.js"></script>
+    <script src="reloj digital 24h + Fecha/scriptReloj.js"></script>
+    <script src="estación meteorológica/scriptEstacionMeteorológica.js"></script>
+    <script src="Links/scriptLinks.js"></script>
+  </body>
+</html>
